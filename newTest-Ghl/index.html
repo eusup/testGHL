@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://lib-v7.readhighlights.com/public_html/viewer-global-app-plus/css/base.css?v=2024062901">
+  <link rel="stylesheet" href="https://lib-v7.readhighlights.com/public_html/viewer-global-app-plus/css/style.css?v=2024062901">
+  <meta id="status-bar" name="theme-color" content="#ff8800"/>
+  <meta name="theme-color" content="#ff8800"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ff8800"/>
+  <title>Document</title>
+</head>
+
+<body id="gray" class="act">
+  <div id="book-layer" style="display:none;"></div>
+  <div id="modal_transparent" class="modal_transparent" style="display: none;"></div>
+
+  <div class="leftCornerBtn off" style="top: 479.5px; display: block;" data-role="prev"></div>
+  <div class="rightCornerBtn off" style="top: 479.5px; display: block;" data-role="next"></div>
+
+  <nav id="top" class="clearFix">
+    <a href="#" id="btn-exit" class="back flex"><span></span></a>
+    <h1 class="nm-fs-44">Alice's Adventures in Wonderland</h1>
+    <a href="#" id="btn-bookmark" class="bookmark"><span></span></a>
+  </nav>
+
+  <nav id="bt">
+    <div class="bt-rw2 book">
+      <ul>
+        <li>
+          <button id="contents-index" class="contents-index"></button>
+        </li>
+        <li>
+          <a href="#" id="btn-prev" class="prev"><img src="image/cmm/icn-prev.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#" id="btn-next" class="next"><img src="image/cmm/icn-next.png" alt=""></a>
+        </li>
+        <li>
+          <button id="zoom-in" class="act">확대</button>
+        </li>
+        <li>
+          <button id="zoom-out">축소</button>
+        </li>
+        <li class="range_wrap">
+          <div class="range">
+            <p class="nm-fs-md"><span><output name="ageOutputName" id="ageOutputId">0</output></span>%</p>
+            <input type="range" name="ageInputName" id="ageInputId" data-type="page" step="1" value="1" min="1" max="91"
+              style="background: linear-gradient(to right, rgb(36, 138, 178) 0%, rgb(36, 138, 178) 1.0989%, rgb(236, 236, 236) 1.0989%, rgb(236, 236, 236) 100%);">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main" id="main">
+    <main class="flex">
+      <section class="flex" id="section_flex">
+        <div id="pdf-container" style="height: 975.819px; width: 689px;">
+          <div class="page">
+            <!-- <div id="textLayer" class="textLayer" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index:10;"></div> -->
+            <!-- <div id="textLayer" class="textLayer" style="z-index: 99;"></div> -->
+            <canvas id="pdf-canvas" role="presentation" height="975" width="689"></canvas>
+          </div>
+        </div>
+      </section>
+      <div id="outlineContainer">
+        <ul>
+          <li><a href="#" data-page="1" class="current">Cover Page</a></li>
+          <li><a href="#" data-page="2" class="">Title Page</a></li>
+          <li><a href="#" data-page="3" class="">Colophon</a></li>
+          <li><a href="#" data-page="4">Contents</a></li>
+          <li><a href="#" data-page="5">Verse</a></li>
+          <li><a href="#" data-page="7">Frontispiece</a></li>
+          <li><a href="#" data-page="8">1. Down The Rabbit-Hole</a></li>
+          <li><a href="#" data-page="13">2. The Pool Of Tears</a></li>
+          <li><a href="#" data-page="19">3. A Caucus-Race And A Long Tale</a></li>
+          <li><a href="#" data-page="25">4. The Rabbit Sends In A Little Bill</a></li>
+          <li><a href="#" data-page="32">5. Advice From A Caterpillar</a></li>
+          <li><a href="#" data-page="40">6. Pig And Pepper</a></li>
+          <li><a href="#" data-page="48">7. A Mad Tea-Party</a></li>
+          <li><a href="#" data-page="55">8. The Queen’s Croquet-Ground</a></li>
+          <li><a href="#" data-page="63">9. The Mock Turtle’s Story</a></li>
+          <li><a href="#" data-page="71">10. The Lobster Quadrille</a></li>
+          <li><a href="#" data-page="77">11. Who Stole The Tarts?</a></li>
+          <li><a href="#" data-page="84">12. Alice’s Evidence</a></li>
+        </ul>
+      </div> <!-- 목차를 표시할 컨테이너 추가 -->
+    </main>
+  </div>
+
+  <div id="recommendPop"
+    style=" display:none; position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; margin: auto; z-index: 100000; overflow: hidden;">
+    <iframe id="assignRecomPopup" frameborder="0" scrolling="yes" style="overflow:hidden;"></iframe>
+  </div>
+</body>
+
+</html>
